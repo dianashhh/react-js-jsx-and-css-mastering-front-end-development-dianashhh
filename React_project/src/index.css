@@ -1,0 +1,103 @@
+/* index.css */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Tailwind import */
+@import "tailwindcss";
+
+/* Global font */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Text outline (optional effect) */
+.text-outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/* Ensure html, body, and root take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section styling */
+.hero-section {
+  width: 100vw;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero text shadows for readability */
+.hero-section h1,
+.hero-section p {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Glowy tagline styling */
+.hero-tagline,
+.tagline-container {
+  text-align: center;
+  font-size: 3rem;       /* large text */
+  font-weight: 900;      /* bold */
+  color: #FF8C42;        /* glowing orange */
+  text-shadow: 
+    0 0 10px #FF8C42, 
+    0 0 20px #FFA500, 
+    0 0 30px #FFB347, 
+    0 0 40px #FFD700;
+  margin-bottom: 40px;
+}
+
+/* Donate button styling */
+.donate-button {
+  background-color: #FF8C42;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #FF8C42, 0 0 20px #FFA500, 0 0 30px #FFB347;
+  transition: all 0.3s ease-in-out;
+}
+
+.donate-button:hover {
+  background-color: #FF6F31;
+  box-shadow: 0 0 20px #FF8C42, 0 0 30px #FFA500, 0 0 40px #FFB347;
+  transform: scale(1.05);
+}
+
+/* Blinking cursor for animated text */
+.blinking-cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-tagline,
+  .tagline-container {
+    font-size: 2.2rem;
+  }
+
+  .donate-button {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+}
+/* End of index.css */
